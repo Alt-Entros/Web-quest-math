@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прокат</title>
+    <link rel="icon" href="../image/logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Прокат</h1>
+    </header>
+    <main>
+        <div class="questions">
+            <div class="attributes">№</div> <div class="attributes">Задание</div> <div class="attributes answer">Ответ</div> <div class="attributes res">Результат</div>
+            <div>10.1</div> <div>
+                                <img src="../image/Page10/questions10_1.png" alt="">
+                            </div> <input type="text" id="answer10_1"> <div id="result10_1" class="result result1"></div>
+            <div>10.2</div> <div>
+                                <img src="../image/Page10/questions10_2.png" alt="">
+                            </div> <input type="text" id="answer10_2"> <div id="result10_2" class="result result2"></div>
+            <div>10.3</div> <div>
+                                <img src="../image/Page10/questions10_3.png" alt="">
+                            </div> <input type="text" placeholder="0.00 " id="answer10_3"> <div id="result10_3" class="result result3"></div> 
+            <div>10.4</div> <div>
+                                <img src="../image/Page10/questions10_4.png" alt="">
+                            </div> <input type="text" id="answer10_4"> <div id="result10_4" class="result result4"></div>
+            <div>10.5</div> <div>
+                                <img src="../image/Page10/questions10_5.png" alt="">
+                           </div> <input type="text" id="answer10_5"> <div id="result10_5" class="result result5"></div>
+            <a href="../map.html" class="btn">Карта</a>
+            <button id="checkAnswersButton10" class="btn">Проверить</button>
+        </div>
+        <div class="images">
+            <div>
+                <img src="../image/Page10/img10_1.jpg" alt="">
+            </div>
+            <div>
+                <img src="../image/Page10/img10_2.jpg" alt="">
+            </div>
+            <div>
+                <img src="../image/Page10/img10_3.jpg" alt="">
+            </div>
+            <div>
+                <img src="../image/Page10/img10_4.jpg" alt="">
+            </div>
+            <div>
+                <img src="../image/Page10/img10_5.jpg" alt="">
+            </div>
+            <div>
+                <img src="../image/Page10/img10_6.jpg" alt="">
+            </div>
+            <img src="../image/Page10/img10_1.jpg" alt="" class="dn">
+            <img src="../image/Page10/img10_2.jpg" alt="" class="dn">
+        </div>
+    </main>
+    <script src="script.js"></script>
+    <script>
+        function CheckAnswersPage10() {
+        var results = [
+            checkAndDisplayResult('answer10_1', 'result10_1', 10, 0),
+            checkAndDisplayResult('answer10_2', 'result10_2', 10, 1),
+            checkAndDisplayResult('answer10_3', 'result10_3', 10, 2),
+            checkAndDisplayResult('answer10_4', 'result10_4', 10, 3),
+            checkAndDisplayResult('answer10_5', 'result10_5', 10, 4)
+        ];
+
+        localStorage.setItem('resultsPage10', JSON.stringify(results));
+        }
+
+        document.getElementById('checkAnswersButton10').addEventListener('click', CheckAnswersPage10);
+    </script>
+</body>
+</html>

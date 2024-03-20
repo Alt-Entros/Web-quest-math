@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Роттонда</title>
+    <link rel="icon" href="../image/logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Роттонда</h1>
+    </header>
+    <main>
+        <div class="questions">
+            <div class="attributes">№</div> <div class="attributes">Задание</div> <div class="attributes answer">Ответ</div> <div class="attributes res">Результат</div>
+            <div>6.1</div> 
+                        <div>
+                            Вычислите площадь боковой поверхности опоры (цилиндр) в м<sup>2</sup> , если диаметр основания =30 см,  высота=270 см.
+                        </div> <input type="text" placeholder="*&pi;" id="answer6_1"> <div id="result6_1" class="result result1"></div>
+            <div>6.2</div> 
+                        <div>
+                            Вычислите объем опоры (цилиндр) в м<sup>3</sup>, если диаметр =30 см.  высота=270 см
+                        </div> <input type="text" placeholder="*&pi;" id="answer6_2"> <div id="result6_2" class="result result2"></div>
+            <div>6.3</div> 
+                        <div>
+                            Вычислите площадь крыши имеющей форму половины сферы в м<sup>2</sup>, если радиус=130 см.
+                        </div> <input type="text" placeholder="*&pi;" id="answer6_3"> <div id="result6_3" class="result result3"></div> 
+            <div>6.4</div> 
+                        <div>
+                            Вычислите объем крыши имеющей форму половины шара в м<sup>3</sup>, если радиус=130 см.
+                        </div> <input type="text" placeholder="*&pi;" id="answer6_4"> <div id="result6_4" class="result result4"></div>
+            <div>6.5</div> 
+                        <div>
+                            Вычислите площадь боковой поверхности основания крыши (цилиндр) в м<sup>2</sup>, если диаметр основания =260 см,  высота = 25 см.
+                            <p class="subtittle">Результат округлите до сотых</p>
+                        </div> <input type="text" placeholder="*&pi;" id="answer6_5"> <div id="result6_5" class="result result5"></div>
+            <a href="../map.html" class="btn">Карта</a>
+            <button id="checkAnswersButton6" class="btn">Проверить</button>
+        </div>
+        <div class="images">
+            <div>
+                <img src="../image/Page6/img6_1.jpg" alt="">
+            </div>
+            <div>
+                <img src="../image/Page6/img6_2.jpg" alt="">
+            </div>
+            <img src="../image/Page6/img6_1.jpg" alt="" class="dn">
+            <img src="../image/Page6/img6_2.jpg" alt="" class="dn">
+        </div>
+    </main>
+    <script src="script.js"></script>
+    <script>
+        function CheckAnswersPage6() {
+        var results = [
+            checkAndDisplayResult('answer6_1', 'result6_1', 6, 0),
+            checkAndDisplayResult('answer6_2', 'result6_2', 6, 1),
+            checkAndDisplayResult('answer6_3', 'result6_3', 6, 2),
+            checkAndDisplayResult('answer6_4', 'result6_4', 6, 3),
+            checkAndDisplayResult('answer6_5', 'result6_5', 6, 4)
+        ];
+
+        localStorage.setItem('resultsPage6', JSON.stringify(results));
+
+        }
+
+        document.getElementById('checkAnswersButton6').addEventListener('click', CheckAnswersPage6);
+    </script>
+</body>
+</html>

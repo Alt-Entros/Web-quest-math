@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каскад прудов</title>
+    <link rel="icon" href="../image/logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Каскад прудов</h1>
+    </header>
+    <main>
+        <div class="questions">
+            <div class="attributes">№</div> <div class="attributes">Задание</div> <div class="attributes answer">Ответ</div> <div class="attributes res">Результат</div>
+            <div>8.1</div> 
+                        <div>
+                            Хвост рыбы весит 4 кг, голова столько, сколько хвост и половина туловища, а туловище столько, сколько голова и хвост. Сколько весит вся рыба?
+                        </div> <input type="text" id="answer8_1"> <div id="result8_1" class="result result1"></div>
+            <div>8.2</div> 
+                        <div>
+                            <img src="../image/Page8/questions8_2.png" alt="">
+                        </div> <input type="text" placeholder="лет" id="answer8_2"> <div id="result8_2" class="result result2"></div>
+            <div>8.3</div> 
+                        <div>
+                            Рыбака спросил: «Сколько может весить самый большой краб?» Он ответил: «2 кг и ещё 6/7 своего веса». Сколько весит краб? 
+                        </div> <input type="text" id="answer8_3"> <div id="result8_3" class="result result3"></div> 
+            <div>8.4</div> 
+                        <div>
+                            Предельный возраст золотой рыбки в два раза меньше возраста сома, предельный возраст которого на 20 лет меньше предельного возраста щуки. Сколько лет может прожить золотая рыбка, если известно, что ее предельный возраст составляет 3/8 предельного возраста щуки?
+                        </div> <input type="text" id="answer8_4"> <div id="result8_4" class="result result4"></div>
+            <div>8.5</div> 
+                        <div>
+                            Два рыбака поймали вместе 33 карпа. Когда первый по своей оплошности выпустил 5 штук, а второй отдал первому 6 штук, то оказалось, что у них карпов поровну. Сколько карпов поймал второй рыбак?
+                        </div> <input type="text" id="answer8_5"> <div id="result8_5" class="result result5"></div>
+            <a href="../map.html" class="btn">Карта</a>
+            <button id="checkAnswersButton8" class="btn">Проверить</button>
+        </div>
+        <div class="images">
+            <div>
+                <img src="../image/Page8/img8_1.jpg" alt="">
+            </div>
+            <div>
+                <img src="../image/Page8/img8_2.jpg" alt="">
+            </div>
+            <div>
+                <img src="../image/Page8/img8_3.jpg" alt="">
+            </div>
+            <img src="../image/Page8/img8_1.jpg" alt="" class="dn">
+            <img src="../image/Page8/img8_2.jpg" alt="" class="dn">
+        </div>
+    </main>
+    <script src="script.js"></script>
+    <script>
+        function CheckAnswersPage8() {
+        var results = [
+            checkAndDisplayResult('answer8_1', 'result8_1', 8, 0),
+            checkAndDisplayResult('answer8_2', 'result8_2', 8, 1),
+            checkAndDisplayResult('answer8_3', 'result8_3', 8, 2),
+            checkAndDisplayResult('answer8_4', 'result8_4', 8, 3),
+            checkAndDisplayResult('answer8_5', 'result8_5', 8, 4)
+        ];
+
+        localStorage.setItem('resultsPage8', JSON.stringify(results));
+
+        }
+
+        document.getElementById('checkAnswersButton8').addEventListener('click', CheckAnswersPage8);
+    </script>
+</body>
+</html>

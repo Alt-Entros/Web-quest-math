@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Храм Серафима Саровского</title>
+    <link rel="icon" href="../image/logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Храм Серафима Саровского</h1>
+    </header>
+    <main>
+        <div class="questions">
+            <div class="attributes">№</div> <div class="attributes">Задание</div> <div class="attributes answer">Ответ</div> <div class="attributes res">Результат</div>
+            <div>11.1</div> <div class="cont_1">
+                                <div>
+                                    <img src="../image/Page11/questions9_1.PNG" alt="">
+                                </div>
+                                Высота конуса равна 2√2. Сечение конуса плоскостью, проходящей через его высоту, является равнобедренный треугольник, боковая сторона которого равна 3. Найдите радиус основания конуса.
+                            </div> <input type="text" id="answer11_1"> <div id="result11_1" class="result result1"></div>
+            <div>11.2</div> <div class="cont_1">
+                                <div>
+                                    <img src="../image/Page11/questions9_2.PNG" alt="">
+                                </div>
+                                Дана правильная четырехугольная призма ABCDA1B1C1D1, сторона основания которой равна 3 дм, высота — 4 дм. Найдите третью часть от площади полной поверхности.
+                            </div> <input type="text" id="answer11_2"> <div id="result11_2" class="result result2"></div>
+            <div>11.3</div> <div class="cont_1">
+                                <div>
+                                    <img src="../image/Page11/questions9_3.PNG" alt="">
+                                </div>
+                                Вычислите образующую конуса, если радиус основания = 8 м, высота конуса 15 м.
+                            </div> <input type="text" id="answer11_3"> <div id="result11_3" class="result result3"></div> 
+            <div>11.4</div> <div class="cont_1">
+                                <div>
+                                    <img src="../image/Page11//questions9_4.PNG" alt="">
+                                </div>
+                                Найдите высоту  правильной четырехугольной пирамиды, если апофема равна 17, сторона основания 16.
+                            </div> <input type="text" id="answer11_4"> <div id="result11_4" class="result result4"></div>
+            <div>11.5</div> <div class="cont_1">
+                                <div>
+                                    <img src="../image/Page11/questions9_5.PNG" alt="">
+                                </div>
+                                Радиус сечения шара = 20 м. Расстояние от цента сечения до центра шара=21 м. Найдите радиус шара.
+                           </div> <input type="text" id="answer11_5"> <div id="result11_5" class="result result5"></div>
+            <a href="../map.html" class="btn">Карта</a>
+            <a href="result.html" class="btn btn2 mbtn" id="checkAnswersButton11">Проверить</a>
+        </div>
+        <div class="images">
+            <div class="card">
+                <img src="../image/Page11/img11_1.jpg" alt="">
+                <img src="../image/Page11/img11_2.jpg" class="img_frame" alt="">
+                <ul>
+                    <li><b>Август 1993 года</b>: первый крестный ход от Храма Александра Невского до «Серафимовой горки».</li>
+                    <li><b>Февраль 2003 года</b>: молебен на начало строительства храма.</li>
+                    <li><b>Май 2008 года</b>: освящение и монтаж 10 колоколов на звоннице, благодаря чему храм обрел свой голос.</li>
+                </ul>
+            </div>
+            <img src="../image/Page11/img11_1.jpg" alt="" class="dn">
+            <img src="../image/Page11/img11_2.jpg" alt="" class="dn">
+        </div>
+    </main>
+    <script src="script.js"></script>
+    <script>
+        function CheckAnswersPage11() {
+        var results = [
+            checkAndDisplayResult('answer11_1', 'result11_1', 11, 0),
+            checkAndDisplayResult('answer11_2', 'result11_2', 11, 1),
+            checkAndDisplayResult('answer11_3', 'result11_3', 11, 2),
+            checkAndDisplayResult('answer11_4', 'result11_4', 11, 3),
+            checkAndDisplayResult('answer11_5', 'result11_5', 11, 4)
+        ];
+
+        localStorage.setItem('resultsPage11', JSON.stringify(results));
+        }
+
+        document.getElementById('checkAnswersButton11').addEventListener('click', CheckAnswersPage11);
+    </script>
+</body>
+</html>

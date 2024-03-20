@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пруд</title>
+    <link rel="icon" href="../image/logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Пруд</h1>
+    </header>
+    <main>
+        <div class="questions">
+            <div class="attributes">№</div> <div class="attributes">Задание</div> <div class="attributes answer">Ответ</div> <div class="attributes res">Результат</div>
+            <div>7.1</div> 
+                        <div>
+                            Сколько зайцев и уток убил охотник, если в корзине, куда он их положил, насчитали 10 голов и 28 ног? В ответ введите количество уток.
+                        </div> <input type="text" id="answer7_1"> <div id="result7_1" class="result result1"></div>
+            <div>7.2</div> 
+                        <div>
+                            В парке живут утки и собаки. У всех животных 50 голов. Число ног всех животных 160. Сколько уток?
+                        </div> <input type="text" id="answer7_2"> <div id="result7_2" class="result result2"></div>
+            <div>7.3</div> 
+                        <div>
+                            Летела стая уток, навстречу им одна утка. «Здравствуйте, - говорит, - сто уток! – «Нет, нас не сто уток. Кабы было ещё столько, да полстолько, да четверть столько, да ты утка, так бы было на сто». Сколько уток в стае.
+                        </div> <input type="text" id="answer7_3"> <div id="result7_3" class="result result3"></div> 
+            <div>7.4</div> 
+                        <div>
+                            Во дворе щенята и утята. Всего 7 голов и 16 ног. Сколько утят?
+                        </div> <input type="text" id="answer7_4"> <div id="result7_4" class="result result4"></div>
+            <div>7.5</div> 
+                        <div>
+                            Летела стая уток. Одна впереди, две позади; одна позади и две впереди; одна между двумя и три в ряд. Сколько уток летело?
+                        </div> <input type="text" id="answer7_5"> <div id="result7_5" class="result result5"></div>
+            <a href="../map.html" class="btn">Карта</a>
+            <button id="checkAnswersButton7" class="btn">Проверить</button>
+        </div>
+        <div class="images">
+            <div>
+                <img src="../image/Page7/img7_1.jpg" alt="">
+            </div>
+            <div>
+                <img src="../image/Page7/img7_2.jpg" alt="">
+            </div>
+            <img src="../image/Page7/img7_1.jpg" alt="" class="dn">
+            <img src="../image/Page7/img7_2.jpg" alt="" class="dn">
+        </div>
+    </main>
+    <script src="script.js"></script>
+    <script>
+        function CheckAnswersPage7() {
+        var results = [
+            checkAndDisplayResult('answer7_1', 'result7_1', 7, 0),
+            checkAndDisplayResult('answer7_2', 'result7_2', 7, 1),
+            checkAndDisplayResult('answer7_3', 'result7_3', 7, 2),
+            checkAndDisplayResult('answer7_4', 'result7_4', 7, 3),
+            checkAndDisplayResult('answer7_5', 'result7_5', 7, 4)
+        ];
+
+        localStorage.setItem('resultsPage7', JSON.stringify(results));
+
+        }
+
+        document.getElementById('checkAnswersButton7').addEventListener('click', CheckAnswersPage7);
+    </script>
+</body>
+</html>

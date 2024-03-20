@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="image/logo.png">
+    <title>Регистрация</title>
+</head>
+<body>
+    <div class="reg">
+        <form action="">
+            <div class="form_img">
+                <img src="image/reg/form_img.png" alt="">
+            </div>
+                <input type="text" id="lastName" placeholder="Фамилия">
+                <input type="text" id="firstName" placeholder="Имя">
+                <input type="text" id="group" placeholder="Группа">
+            <a href="#" id="To" onclick="saveAndRedirect()">регистрация</a>
+        </form>
+    </div>
+    <script src="script.js"></script>
+    <script>
+       function saveAndRedirect() {
+        const lastName = document.getElementById('lastName').value.trim();
+        const firstName = document.getElementById('firstName').value.trim();
+        const group = document.getElementById('group').value.trim();
+
+        if (!lastName || !firstName || !group) {
+            alert("Все поля должны быть заполнены!");
+            // Оставляем пользователя на текущей странице
+            window.location.href = '#';
+            return;
+        }
+
+        const userInfo = { lastName, firstName, group };
+        localStorage.setItem('userInfo', JSON.stringify(userInfo));
+
+        // Переадресация на map.html, если все поля заполнены
+        window.location.href = 'map.html';
+    }
+
+    
+    </script>
+</body>
+</html>

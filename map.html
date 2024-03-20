@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карта</title>
+    <link rel="icon" href="image/logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <header>
+    <h1>
+        Математика в северном парке Хабаровска
+    </h1>
+   </header>
+   <main>
+    <div class="locations">
+       <a href="Question_page/page1.html">
+        <div class="card">
+            <img class="arrow" id="arrow1" src="image/map/Right_arrow.svg" alt="">
+            <img class="location" src="image/map/Page1.png" alt="">
+        </div>
+       </a>
+       <a href="Question_page/page2.html">
+        <div class="card">
+            <img class="arrow" id="arrow2" src="image/map/Right_arrow.svg" alt="">
+            <img src="image/map/Page2.png">
+        </div>
+       </a>
+       <a href="Question_page/page3.html">
+        <div class="card">
+            <img class="arrow" id="arrow3" src="image/map/Right_arrow.svg" alt="">
+            <img src="image/map/Page3.png" alt="">
+        </div>
+       </a>
+       <a href="Question_page/page4.html">
+        <div class="card">
+            <img class="arrow" id="arrow4" src="image/map/Down_arrow.svg" alt="">
+            <img src="image/map/Page4.png" alt="">
+        </div>
+       </a>
+       <a href="Question_page/page8.html">
+        <div class="card">
+            <img class="arrow" id="arrow8" src="image/map/Down_arrow.svg" alt="">
+            <img src="image/map/Page8.png" alt="">
+        </div>
+       </a>
+       <a href="Question_page/page7.html">
+        <div class="card">
+            <img class="arrow" id="arrow7" src="image/map/Left_arrow.svg" alt="">
+            <img src="image/map/Page7.png" alt="">
+        </div>
+       </a>
+       <a href="Question_page/page6.html">
+        <div class="card">
+            <img class="arrow" id="arrow6" src="image/map/Left_arrow.svg" alt="">
+            <img src="image/map/Page6.png" alt="">
+        </div>
+       </a>
+       <a href="Question_page/page5.html">
+        <div class="card">
+            <img class="arrow" id="arrow5" src="image/map/Left_arrow.svg" alt="">
+            <img src="image/map/Page5.png" alt="">
+        </div>
+       </a>
+       <a href="Question_page/page9.html">
+        <div class="card">
+            <img class="arrow" id="arrow9" src="image/map/Right_arrow.svg" alt="">
+            <img src="image/map/Page9.png" alt="">
+        </div>
+       </a>
+       <a href="Question_page/page10.html">
+        <div class="card">
+            <img class="arrow" id="arrow10" src="image/map/Right_arrow.svg" alt="">
+            <img class="location" src="image/map/Page10.png" alt="">
+        </div>
+       </a>
+       <a href="Question_page/page11.html">
+        <div class="card">
+            <img class="location" src="image/map/Page11.png" alt="">
+        </div>
+       </a>
+       <button onclick="clearLocalStorageAndKeepElements(['userInfo', 'EnigmaKey', 'ExpectedValuePage1', 'ExpectedValuePage2', 'ExpectedValuePage3', 'ExpectedValuePage4', 'ExpectedValuePage5', 'ExpectedValuePage6', 'ExpectedValuePage7', 'ExpectedValuePage8', 'ExpectedValuePage9', 'ExpectedValuePage10', 'ExpectedValuePage11',], ['arrow1', 'arrow2', 'arrow3', 'arrow4', 'arrow5', 'arrow6', 'arrow7', 'arrow8', 'arrow9', 'arrow10',])">
+           <div class="card">
+               <img class="location" src="image/map/clear.png" alt="">
+           </div>
+       </button>
+    </div>
+        <div class="map">
+            <img src="image/map/map1_1.png" alt="">
+        </div>
+   </main>
+   <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    checkLocalStorageAndDisplayElement('resultsPage1', 'arrow1');
+    checkLocalStorageAndDisplayElement('resultsPage2', 'arrow2');
+    checkLocalStorageAndDisplayElement('resultsPage3', 'arrow3');
+    checkLocalStorageAndDisplayElement('resultsPage4', 'arrow4');
+    checkLocalStorageAndDisplayElement('resultsPage5', 'arrow5');
+    checkLocalStorageAndDisplayElement('resultsPage6', 'arrow6');
+    checkLocalStorageAndDisplayElement('resultsPage7', 'arrow7');
+    checkLocalStorageAndDisplayElement('resultsPage8', 'arrow8');
+    checkLocalStorageAndDisplayElement('resultsPage9', 'arrow9');
+    checkLocalStorageAndDisplayElement('resultsPage10', 'arrow10');
+    });
+
+    function checkLocalStorageAndDisplayElement(key, elementId) {
+        if (localStorage.getItem(key)) {
+            var element = document.getElementById(elementId);
+            if (element) {
+                element.style.display = 'block';
+            }
+        }
+    }
+    function clearLocalStorageAndKeepElements(keepKeys, elementIdsToHide) {
+    // Сохраняем данные, которые необходимо оставить
+    const savedData = {};
+    keepKeys.forEach(function(key) {
+        const item = localStorage.getItem(key);
+        if (item) {
+            savedData[key] = item;
+        }
+    });
+
+    // Очищаем localStorage
+    localStorage.clear();
+
+    // Восстанавливаем сохраненные данные
+    for (const key in savedData) {
+        localStorage.setItem(key, savedData[key]);
+    }
+
+    // Скрываем указанные элементы
+    elementIdsToHide.forEach(function(elementId) {
+        var element = document.getElementById(elementId);
+        if (element) {
+            element.style.display = 'none';
+        }
+    });
+}
+
+    
+   </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сказочная математика</title>
+    <link rel="icon" href="../image/logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Сказочная математика</h1>
+    </header>
+    <main>
+        <div class="questions">
+            <div class="attributes">№</div> <div class="attributes">Задание</div> <div class="attributes answer">Ответ</div> <div class="attributes res">Результат</div>
+            <div>3.1</div> <div>
+                                Помогу тебе Иван вызволить Василису прекрасную, сказала баба яга, по душе ты мне пришелся, да и от кощеева коварства я много страдала, уж очень хочется его проучить. Вот тебе Иван клубок, приведет он тебя прямо к Кошею бессмертному. В подземелье у него три темницы, в одной из них томиться Василиса прекрасная, в другой Змей Горыныч, а третья темница пустая. Учти что все надписи на дверях темницы неверные. Бросил Иван клубок на землю. Покатился клубок, а Иван за ним.  Долго ли, коротко ли, дошел он до Кощея бессмертного. Потребовал у него Василису прекрасную. Повел Кощей Ивана в подземелье, показал там три темницы на дверях которых написано: Темница1: «Здесь Василиса прекрасная» Темница2: «Темница 3 не пустая» Темница3: «Здесь Змей Горыныч» Отпущу Иван с тобой Василису, если угадаешь в какой она темнице.
+                            </div> <input type="text" id="answer3_1"> <div id="result3_1" class="result result1"></div>
+            <div>3.2</div> <div>
+                                Решил как-то Илья Муромец изловить двеннадцатиголового Змея Горыныча живьем для зоопарка. Богатырь запросто поборет Змея, только бы тот огнем не плевался. Илья Муромец поступил так: набрал огнетушителей и пошел на Змея. Только Змей пасть откроет, что бы огнем пахнуть, богатырь ему туда огнетушитель швыряет, а потом еще один для надежности. Сколько огнетушителей потребуется Илье Муромцу?
+                            </div> <input type="text" id="answer3_2"> <div id="result3_2" class="result result2"></div>
+            <div>3.3</div> <div>
+                                Кощей поспорил с бабой-Ягой, что просидит в печке 200 минут, а просидел 68 % этого времени. Сколько минут просидел Кощей в печи?
+                            </div> <input type="text" id="answer3_3"> <div id="result3_3" class="result result3"></div> 
+            <div>3.4</div> <div>
+                                Леший собрал 48 мухоморов, а Баба Яга на 12 съедобных грибов больше. Сколько всего съедобных грибов собрали Леший и Баба-Яга?                               
+                            </div> <input type="text" id="answer3_4"> <div id="result3_4" class="result result4"></div>
+            <div>3.5</div> <div>
+                                Для украшения каменного цветка Данила-мастер использовал 32 самоцвета – это четвертая часть всех самоцветов, которые были у Данилы. Сколько самоцветов осталось у Данилы?                            
+                            </div> <input type="text" id="answer3_5"> <div id="result3_5" class="result result5"></div>
+            <a href="../map.html" class="btn">Карта</a>
+            <button id="checkAnswersButton3" class="btn">Проверить</button>
+        </div>
+        <div class="images">
+            <div>
+                <img src="../image/Page3/img3_1.jpg" alt="">
+            </div>
+            <div>
+                <img src="../image/Page3/img3_2.jpg" alt="">
+            </div>
+            <img src="../image/Page3/img3_1.jpg" alt="" class="dn">
+            <img src="../image/Page3/img3_2.jpg" alt="" class="dn">
+        </div>
+    </main>
+    <script src="script.js"></script>
+    <script>
+        function CheckAnswersPage3() {
+        var results = [
+            checkAndDisplayResult('answer3_1', 'result3_1', 3, 0),
+            checkAndDisplayResult('answer3_2', 'result3_2', 3, 1),
+            checkAndDisplayResult('answer3_3', 'result3_3', 3, 2),
+            checkAndDisplayResult('answer3_4', 'result3_4', 3, 3),
+            checkAndDisplayResult('answer3_5', 'result3_5', 3, 4)
+        ];
+
+        localStorage.setItem('resultsPage3', JSON.stringify(results));
+
+        }
+
+        document.getElementById('checkAnswersButton3').addEventListener('click', CheckAnswersPage3);
+    </script>
+</body>
+</html>

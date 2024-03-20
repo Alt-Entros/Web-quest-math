@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Спортплощадка</title>
+    <link rel="icon" href="../image/logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Спортплощадка</h1>
+    </header>
+    <main>
+        <div class="questions">
+            <div class="attributes">№</div> <div class="attributes">Задание</div> <div class="attributes answer">Ответ</div> <div class="attributes res">Результат</div>
+            <div>4.1</div> <div>
+                                В угловом секторе стадиона в первом ряду 7 мест, а в каждом следующем на 2 места больше, чем в предыдущем. Сколько мест в 26 ряду.                            
+                            </div> <input type="text" id="answer4_1"> <div id="result4_1" class="result result1"></div>
+            <div>4.2</div> <div>
+                                Изобретатель игры «Шахматы» за свою работу у царя попросил следующую награду.  Получить столько зерна сколько всего на клетках шахматной доске. Если на первую клетку одно зерно, на вторую два зерна, на третью четыре зерна и т.д.  Сколько зерен будет на восьмой клетке шахматной доски?                            
+                            </div> <input type="text" id="answer4_2"> <div id="result4_2" class="result result2"></div>
+            <div>4.3</div> <div>
+                                Вика решила начать делать зарядку каждое утро. В первый день  она сделала 30 приседаний, а в каждый следующий она делала на одно и то же количество приседаний больше, чем в предыдущий день. За 15 дней она сделала 975 приседаний. Сколько приседаний сделала Вика на 5 день?                            
+                            </div> <input type="text" id="answer4_3"> <div id="result4_3" class="result result3"></div> 
+            <div>4.4</div> <div>
+                                Юра решил каждый день подтягиваться на турнике. В первый день он подтянулся 8 раз, в каждый следующий на 2 раза больше. Сколько раз подтянулся Юра на 25 день? 
+                            </div> <input type="text" id="answer4_4"> <div id="result4_4" class="result result4"></div>
+            <div>4.5</div> <div>
+                                Тренер посоветовал Андрею в первый день занятий провести на беговой дорожке 15 минут, а на каждом следующем занятии увеличивать время на 7 минут. За сколько занятий Андрей проведет на беговой дорожке в общей сложности 2 часа 25 минут, если будет следовать советам тренера?
+                            </div> <input type="text" id="answer4_5"> <div id="result4_5" class="result result15"></div>
+            <a href="../map.html" class="btn">Карта</a>
+            <button id="checkAnswersButton4" class="btn">Проверить</button>
+        </div>
+        <div class="images">
+            <div>
+                <img src="../image/Page4/img4_1.jpg" alt="">
+            </div>
+            <div>
+                <img src="../image/Page4/img4_2.jpg" alt="">
+            </div>
+            <img src="../image/Page4/img4_1.jpg" alt="" class="dn">
+            <img src="../image/Page4/img4_2.jpg" alt="" class="dn">
+        </div>
+    </main>
+    <script src="script.js"></script>
+    <script>
+        function CheckAnswersPage4() {
+        var results = [
+            checkAndDisplayResult('answer4_1', 'result4_1', 4, 0),
+            checkAndDisplayResult('answer4_2', 'result4_2', 4, 1),
+            checkAndDisplayResult('answer4_3', 'result4_3', 4, 2),
+            checkAndDisplayResult('answer4_4', 'result4_4', 4, 3),
+            checkAndDisplayResult('answer4_5', 'result4_5', 4, 4)
+        ];
+
+        localStorage.setItem('resultsPage4', JSON.stringify(results));
+
+        }
+
+        document.getElementById('checkAnswersButton4').addEventListener('click', CheckAnswersPage4);
+    </script>
+</body>
+</html>
